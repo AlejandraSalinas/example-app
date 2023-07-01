@@ -12,7 +12,7 @@
     <h1 class="text-center">CRUD con Laravel</h1>
     <hr>
     <br>
-     <!-- Modal Crear-->
+     <!--Crear Usuario-->
      <div class="modal fade" id="ModalCrear" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
@@ -37,11 +37,7 @@
                     <div class="mb-3">
                         <label for="telefono" class="form-label">Teléfono</label>
                         <input type="number" class="form-control" name="telefono" id="telefono" aria-describedby="emailHelp">                                                  
-                    </div>
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo</label>
-                        <input type="text" class="form-control" name="correo" id="correo" aria-describedby="emailHelp">                                                  
-                    </div>                                                
+                    </div>                                              
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-primary">Crear</button>
@@ -63,19 +59,17 @@
                             <th scope="col">Apellidos</th>
                             <th scope="col">Edad</th>
                             <th scope="col">Teléfono</th>
-                            <th scope="col">Correo</th>
                             <th scope="col">Opciones</th>
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                        @foreach ($sql as $item)                        
+                        <!-- @foreach ($sql as $item)                         -->
                             <tr>
-                                <th>{{$item->id}}</th>
+                                <td>{{$item->id}}</td>
                                 <td>{{$item->nombres}}</td>
                                 <td>{{$item->apellidos}}</td>
                                 <td>{{$item->edad}}</td>
                                 <td>{{$item->telefono}}</td>
-                                <td>{{$item->correo}}</td>
                                 <td>
                                     <a href="" data-bs-toggle="modal" data-bs-target="#ModalEditar" class="btn btn-warning btn-sm">
                                         <i class="bi bi-pencil-square"></i>
@@ -126,7 +120,7 @@
                                     </div>
                                 </div>
                             </tr>
-                        @endforeach                   
+                        <!-- @endforeach                    -->
                     </tbody>
                 </table>        
             </div>
