@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [UsuariosController::class, 'index'])->name('usuarios.index');
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::resource('usuarios', UserController::class);
 
-
-// Route::get('/perfil', function () {
-//     return view('partials.perfil');
-// });
